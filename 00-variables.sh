@@ -14,5 +14,6 @@ endIp=0.0.0.0
 
 # Static Web App
 WEB_APP_NAME="tour-of-heroes-web"
+GITHUB_USER_NAME="0GiS0"
 
 echo -e "All variables set.\n"
