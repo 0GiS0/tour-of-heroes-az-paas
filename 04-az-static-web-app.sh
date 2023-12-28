@@ -8,3 +8,5 @@ az staticwebapp create \
 --branch main \
 --app-location "src" \
 --login-with-github
+
+# https://azure.github.io/static-web-apps-cli/
