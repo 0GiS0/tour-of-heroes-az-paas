@@ -1,6 +1,6 @@
 echo -e "Create a SQL Database in Azure\n"
 
-echo "Creating $server in $location..."
+echo "Creating $SQL_SERVER_NAME in $LOCATION..."
 az sql server create --name $SQL_SERVER_NAME \
 --resource-group $RESOURCE_GROUP \
 --location "$LOCATION" \
