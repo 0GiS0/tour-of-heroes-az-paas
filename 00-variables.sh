@@ -3,7 +3,7 @@ LOCATION="uksouth"
 APP_SVC_PLAN_NAME="tour-of-heroes-plan"
 
 # App Service
-WEB_APP_NAME="tour-of-heroes-api"
+WEB_API_NAME="tour-of-heroes-api"
 
 # Database
 SQL_SERVER_NAME="heroes-sql-server"
