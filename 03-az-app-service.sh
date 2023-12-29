@@ -11,8 +11,7 @@ echo "Creating $WEB_API_NAME in $LOCATION..."
 az webapp create \
 --name $WEB_API_NAME \
 --resource-group $RESOURCE_GROUP \
---plan $APP_SVC_PLAN_NAME \
---deployment-local-git
+--plan $APP_SVC_PLAN_NAME
 
 echo "Configuring $WEB_API_NAME..."
 az webapp config connection-string set \
@@ -25,11 +24,14 @@ echo "Clone the repo..."
 git clone https://github.com/0GiS0/tour-of-heroes-dotnet-api.git
 cd tour-of-heroes-dotnet-api
 
-dotnet publish tour-of-heroes-api.csproj -c Debug -o ./publish
+dotnet publish tour-of-heroes-api.csproj -o ./publish
 
 cd publish
 
-az webapp up \
--n $WEB_API_NAME \
--g $RESOURCE_GROUP \
---launch-browser
+zip -r site.zip *
+
+az webapp deployment source config-zip \
+--src site.zip \
+--resource-group $RESOURCE_GROUP \
+--name $WEB_API_NAME \
+--debug
