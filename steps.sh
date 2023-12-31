@@ -1,5 +1,9 @@
-source 00-variables.sh
+source 0.variables.sh
 
-source 01-resource-group.sh
+source 01.resource-group.sh
 
-source 02-az-sql-database.sh
+source 2.sql-database.sh
+
+source 3.app-service.sh
+
+source 4.static-webapp.sh
