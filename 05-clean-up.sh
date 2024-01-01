@@ -1,0 +1,1 @@
+time az group delete -n $RESOURCE_GROUP --yes
